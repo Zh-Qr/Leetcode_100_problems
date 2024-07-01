@@ -43,10 +43,10 @@ public:
         map<int,int> a;//建立哈希表
         vector<int> b(2,-1);//存放结果
         for(int i=0;i<nums.size();i++){
-            if(a.count(target-nums[i])>0)
+            if(a.count(target-nums[i])>0) //寻找键
             {
-                b[0] = a[target-nums[i]];
-                b[1] = i;
+                b[0] = a[target-nums[i]]; //键值，即array索引
+                b[1] = i;   //索引
                 break;
             }
             a[nums[i]] = i;
